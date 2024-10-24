@@ -1,5 +1,5 @@
 
-## Learning Operating Systems from Scratch
+## Learning Operating System from Scratch
 
 Welcome to this project! I'm diving deep into operating systems with a focus on understanding core concepts through hands-on learning. My goal is to strengthen my foundation in operating systems by implementing the concepts whenever possible.
 
