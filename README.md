@@ -4,8 +4,8 @@
 Welcome to this project! I'm diving deep into operating systems with a focus on understanding core concepts through hands-on learning. My goal is to strengthen my foundation in operating systems by implementing the concepts whenever possible.
 
 The below mentioned resources are followed to give us a direction but the learning and implementation will not be limited to the books.
-[three easy pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
-[csapp](https://github.com/wangmu0115/Book-CSAPP/blob/master/_Attachments/Computer_Systems_A_Programmers_Perspective(3rd).pdf)
+- [three easy pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+- [csapp](https://github.com/wangmu0115/Book-CSAPP/blob/master/_Attachments/Computer_Systems_A_Programmers_Perspective(3rd).pdf)
 
 The main goal is to try implementing the concepts when possible. I will be working on the homework section of the book Three-Easy-Pieces for practice. I will be extensively using the Search Engine and LLMs to improve my understanding on a particular concept if necessary.
 
