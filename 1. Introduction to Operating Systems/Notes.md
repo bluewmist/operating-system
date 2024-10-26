@@ -3,12 +3,14 @@
 If you are not familiar with computer program you can read [Introduction to Computing Systems](https://icourse.club/uploads/files/96a2b94d4be48285f2605d843a1e6db37da9a944.pdf). It is a really comprehensive book to start your computer science journey if you have no idea about programming in general.
 
 Concepts learnt in the chapter:
+
 - Running program -> Executes several instructions per second.
 - Processor's job -> fetch from memory, decode, execute.
 - Von Neumann model of computing.
 - Virtualization of resources
 
 Crux of the problem.
+
 - How to virtualize processes?
 
 - Benefit of virtualization.
@@ -53,7 +55,7 @@ There are certain policies followed by the OS to avoid some conflicts which will
 int main(int argc, char *argv[]) {
     // Allocate memory dynamically for one integer
     int *p = malloc(sizeof(int));
-    
+
     // Check if memory allocation was successful
     assert(p != NULL);  // if p is NULL, the program will terminate
 
@@ -66,7 +68,7 @@ int main(int argc, char *argv[]) {
     // Start an infinite loop to increment and print the integer value
     while (1) {
         usleep(1000000);  // pause for 1 second (1,000,000 microseconds)
-        
+
         *p = *p + 1;      // increment the integer at the memory pointed to by p
         printf("(%d) p: %d\n", getpid(), *p);  // print process ID and new value of *p
     }
@@ -77,6 +79,7 @@ int main(int argc, char *argv[]) {
     return 0;  // return 0 to indicate successful completion (never reached)
 }
 ```
+
 The above program creates a slot in the main memory to store an integer type, then it prints the process id and address of the variable. It initially stores 0 in the variable. Finally the loop increments the value stored at the address held in p.
 
 If you run multiple instances of the program we observe same memory address being allocated to the programs. This is because of the virtual address space allocated to each process and the OS maps it to the physical memory of the machine. This is virtualization of memory.
@@ -108,10 +111,10 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "usage: threads <value>\n");  // print usage message if not
         exit(1);  // exit with error status if argument count is incorrect
     }
-    
+
     // Convert the argument (string) to an integer and assign it to `loops`
     loops = atoi(argv[1]);
-    
+
     // Declare two pthread_t variables to hold thread identifiers
     pthread_t p1, p2;
 
@@ -120,13 +123,13 @@ int main(int argc, char *argv[]) {
 
     // Create the first thread, passing `worker` as the function to execute
     pthread_create(&p1, NULL, worker, NULL);
-    
+
     // Create the second thread, also running `worker`
     pthread_create(&p2, NULL, worker, NULL);
-    
+
     // Wait for the first thread to finish execution
     pthread_join(p1, NULL);
-    
+
     // Wait for the second thread to finish execution
     pthread_join(p2, NULL);
 
@@ -179,3 +182,6 @@ close(fd);
 return 0; // Return 0 to indicate successful execution
 }
 ```
+
+The open, write and close operations are system calls routed to the file system.
+OS is sometimes seen as a standard library as it provides the higher level access to the devices using system calls.
