@@ -1,4 +1,3 @@
-##### Note: You will need to open this in obsidian to get the images rendered properly.
 ```
 #include <stdio.h>
 
