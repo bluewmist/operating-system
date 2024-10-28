@@ -82,6 +82,7 @@ It interprets the instructions stored in main memory. It has a program counter(P
 The input flows from the I/O device to the register which is then stored in memory. Once the command is entered the shell loads the executable file(hello) form disk directly to the main memory using a technique known as *Direct Memory Access*. After the code and data has been loaded into memory, the processor begins executing the machine-language instructions in the hello program's main routine. Here the data hello world\n gets to the display device to be displayed on screen.
 
 ![Writing the output string from memory to the display](Images/Pasted_image_20240814171751.png)
+
 **Writing the output string from memory to the display**
 
 #### Caches Matter
@@ -148,7 +149,7 @@ We use concurrency to refer to the general concept of a system with multiple, si
 	Multi-core processors have multiple CPUs integrated onto a single chip.
 
 	![](Images/Pasted_image_20240920170027.png)
-	
+
 	Each has its own L1 and L2 cache. L1 is split into two, one to hold the fetched instruction and the other to hold data. The cores share higher levels of cache and an interface to main memory.
 	**Hyperthreading**, also called simultaneous multi-threading, which allows a CPU to execute multiple flows of control by having copies of PC and register. A hyperthreaded processor decides which of its threads to execute on a cycle-by-cycle basis.The ability to switch on every clock cycle comes from having multiple threads "ready to go" at all times within the processor itself. As an example, the Intel Core i7 processor can have each core executing two threads, and so a four-core system can actually execute eight threads in parallel.
 
